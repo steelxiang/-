@@ -19,11 +19,12 @@ public class MyCalander extends JFrame{
 	     	 JButton t3= new JButton();
 	     	 JButton t4= new JButton();
 	public  void setTime() {
-		String[] week= {"星期一","星期二","星期三","星期四","星期五","星期六","星期天"};
+		String[] week= {"星期天","星期二","星期三","星期四","星期五","星期六","星期一"};
 		Calendar ca = Calendar.getInstance();
 		String year = String.valueOf(ca.get(Calendar.YEAR));
-		String month = String.valueOf(ca.get(Calendar.MONTH));
-		int i = ca.get(Calendar.DAY_OF_WEEK);
+		String month = String.valueOf(ca.get(Calendar.MONTH)+1);
+		int i = ca.get(Calendar.DAY_OF_WEEK)-1;
+		//System.out.println(i);
 		String day = String.valueOf(ca.get(Calendar.DATE));
 		String hour = String.valueOf(ca.get(Calendar.HOUR_OF_DAY));
 		String minute = String.valueOf(ca.get(Calendar.MINUTE));
